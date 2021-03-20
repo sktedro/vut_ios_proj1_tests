@@ -35,3 +35,6 @@ output into data/ref/[kit]
 If you want to write your own test cases, please only write one test with
 stock-4.log.gz in a single file. The testing seemed unstable with removing and
 copying all logs for every single test case
+
+Other notes:
+Carriage return characters are ignored
