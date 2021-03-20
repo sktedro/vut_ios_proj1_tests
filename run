@@ -16,8 +16,7 @@ ACTLINE=$(echo "$INPUT" | head -1)
 INPUT=$(echo "$INPUT" | tr '\n' ';' | cut -d ';' -f2- | tr ';' '\n')
 ACTOUT="$OUT/$CT"
 while [ -n "$ACTLINE" ]; do
-  echo "Writing output of \n\t$ACTLINE\nto \t$ACTOUT\n"
-  #eval "$ACTLINE" > "$ACTOUT"
+  echo -e "Writing output of \n\t$ACTLINE\nto \t$ACTOUT\n"
   eval "$ACTLINE" | tr -d '\r' > "$ACTOUT"
 
   CT=$(($CT+1))

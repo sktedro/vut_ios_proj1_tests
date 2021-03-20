@@ -11,7 +11,7 @@ while [ -f "$OUT$CT" ]; do
   fi
 
   echo "============================================================"
-  echo "Difference between files \n\t$REF$CT\nand \t$OUT$CT\n"
+  echo -e "Difference between files \n\t$REF$CT\nand \t$OUT$CT\n"
   eval diff -s -a "$REF$CT" "$OUT$CT"
   CT=$((CT+1))
 done
