@@ -10,7 +10,7 @@
 ./tradelog -b "2021-07-29 22:10:00" -t MSFT -t MA -t BAC -t GOOG -t BABA pos stock-2.log stock-4.log.gz stock-6.log
 ./tradelog -t GOOG -t GOOGLE -t AAPL pos stock-6.log
 ./tradelog pos stock-2.log stock-4.log.gz stock-6.log
-./tradelog stock-4.log.gz
+./tradelog stock-2.log
 ./tradelog last-price stock-2.log stock-4.log.gz stock-6.log
 ./tradelog last-price stock-4.log.gz
 ./tradelog hist-ord stock-2.log stock-4.log.gz stock-6.log
