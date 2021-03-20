@@ -8,7 +8,7 @@ eval mkdir -p data
 eval mkdir -p data/output
 eval rm -rf "$OUT"
 eval mkdir "$OUT"
-eval rm stock*
+eval rm stock-*
 eval cp stonks/* ./
 
 CT=1
@@ -16,8 +16,6 @@ ACTLINE=$(echo "$INPUT" | head -1)
 INPUT=$(echo "$INPUT" | tr '\n' ';' | cut -d ';' -f2- | tr ';' '\n')
 ACTOUT="$OUT/$CT"
 while [ -n "$ACTLINE" ]; do
-  eval rm stock*
-  eval cp stonks/* ./
   echo "Writing output of \n\t$ACTLINE\nto \t$ACTOUT\n"
   eval "$ACTLINE" > "$ACTOUT"
 
