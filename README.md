@@ -6,13 +6,14 @@ Probably won't work on Windows OS!
 INSTRUCTIONS:
 
 [kit] can be:
-'orig' for test cases or reference outputs copied from the assignment
-[name] for test cases or reference outputs written by a user [name]
+-'orig' for test cases or reference outputs copied from the assignment
+-[name] for test cases or reference outputs written by a user [name]
 
 To run tests from a kit and compare your outputs to reference outputs, run
--./run [kit]
-  -eg. ./run orig
-  -or  ./run tedro
+
+./run [kit]
+  - eg. ./run orig
+  - or  ./run tedro
 
 You can check what users have provided reference outputs by checking in the
 data/input folder
