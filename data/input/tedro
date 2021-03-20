@@ -16,7 +16,6 @@
 ./tradelog -a "2021-07-29 22:10:00" hist-ord stock-2.log
 ./tradelog -w 19 -a "2021-07-29 22:10:00" hist-ord stock-2.log
 ./tradelog -t TSLA -a "2021-07-29 22:10:00" hist-ord stock-2.log
-./tradelog graph-pos stock-2.log
 ./tradelog -w 50 graph-pos stock-6.log
 ./tradelog -w 10 -t AAPL -t GOOG -t GOOGL graph-pos stock-2.log stock-6.log
 ./tradelog -w 19 graph-pos stock-2.log
@@ -24,5 +23,6 @@ cat stock-2.log | ./tradelog list-tick
 cat stock-2.log | ./tradelog -a "2021-07-29 22:10:00" profit
 cat stock-6.log | ./tradelog -t GOOG -t AAPL pos
 cat stock-6.log | ./tradelog last-price
+cat stock-2.log | head -n 5 | ./tradelog graph-pos
 cat stock-6.log | ./tradelog -w 30 -a "2021-07-29 18:30:59" hist-ord
 cat stock-6.log | ./tradelog -w 30 -b "2021-07-29 16:33:59" graph-pos
