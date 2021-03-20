@@ -30,3 +30,7 @@ output into data/ref/[kit]
 
 To compare reference output and your output (which has already been generated),
 it is enough to run ./compare [kit]
+
+If you want to write your own test cases, please only write one test with
+stock-4.log.gz in a single file. The testing seemed unstable with removing and
+copying all logs for every single test case
