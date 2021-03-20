@@ -21,4 +21,4 @@
 ./tradelog graph-pos stock-2.log
 ./tradelog -w 50 graph-pos stock-2.log stock-4.log.gz stock-6.log
 ./tradelog -w 99 graph-pos stock-4.log.gz
-./tradelog -w 10 -t AAPL -t GOOG -t GOOGL graph-pos stock-2.log stock-4.log.gz stock-6.log
+./tradelog -w 10 -t AAPL -t GOOG -t GOOGL graph-pos stock-2.log stock-4.log.gz stock-6.log 
