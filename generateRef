@@ -1,0 +1,27 @@
+#!/bin/sh
+
+GENTO="data/ref/$1"
+INPUT=$(eval cat "data/input/$1")
+
+eval mkdir -p data
+eval mkdir -p data/ref
+eval rm -rf "$GENTO"
+eval mkdir "$GENTO"
+
+CT=1
+ACTLINE=$(echo "$INPUT" | head -$CT)
+INPUT=$(echo "$INPUT" | tr '\n' ';' | cut -d ';' -f2- | tr ';' '\n')
+ACTOUT="$GENTO/$CT"
+while [ -n "$ACTLINE" ]; do
+  eval rm stock*
+  cp stonks/* ./
+  echo "Writing output of \n\t$ACTLINE\nto \t$ACTOUT\n"
+  eval "$ACTLINE" > "$ACTOUT"
+
+  CT=$(($CT+1))
+  ACTLINE=$(echo "$INPUT" | head -$CT)
+  INPUT=$(echo "$INPUT" | tr '\n' ';' | cut -d ';' -f2- | tr ';' '\n')
+  ACTOUT="$GENTO/$CT"
+done
+
+echo "Done generating reference output"

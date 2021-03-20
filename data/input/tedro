@@ -1,0 +1,2 @@
+./tradelog list-tick stock-2.log
+./tradelog -t CVX stock-4.log.gz | head -n 3

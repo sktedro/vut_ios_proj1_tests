@@ -1,0 +1,17 @@
+#!/bin/sh
+
+REF="data/ref/$1/"
+OUT="data/output/$1/"
+
+CT=1
+while [ -f "$OUT$CT" ]; do
+  if [ ! -f "$REF$CT" ]; then
+    echo "There are more output files than reference files. Exiting."
+    exit 1
+  fi
+
+  echo "============================================================"
+  echo "Difference between files \n\t$REF$CT\nand \t$OUT$CT\n"
+  eval diff "$REF$CT" "$OUT$CT"
+  CT=$((CT+1))
+done

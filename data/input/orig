@@ -1,0 +1,13 @@
+cat stock-2.log | head -n 5 | ./tradelog
+./tradelog -t TSLA -t V stock-2.log
+./tradelog -t CVX stock-4.log.gz | head -n 3
+./tradelog list-tick stock-2.log
+./tradelog profit stock-2.log
+./tradelog -t TSM -t PYPL profit stock-2.log
+./tradelog pos stock-2.log
+./tradelog -t TSM -t PYPL -t AAPL pos stock-2.log
+./tradelog last-price stock-2.log
+./tradelog hist-ord stock-2.log
+./tradelog -w 100 graph-pos stock-6.log
+./tradelog -w 10 -t FB -t JNJ -t WMT graph-pos stock-6.log
+cat /dev/null | ./tradelog profit
