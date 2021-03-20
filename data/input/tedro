@@ -1,5 +1,4 @@
-./tradelog list-tick stock-4.log.gz stock-2.log stock-6.log
-./tradelog list-tick stock-2.log stock-6.log
+./tradelog list-tick stock-2.log stock-4.log.gz stock-6.log
 ./tradelog profit stock-2.log stock-6.log
 ./tradelog -a "2021-07-29 22:10:00" profit stock-2.log
 ./tradelog -a "2021-07-29 23:48:00" profit stock-2.log
