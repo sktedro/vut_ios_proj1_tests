@@ -10,6 +10,11 @@ while [ -f "$OUT$CT" ]; do
     exit 1
   fi
 
+  REFDATA=$(cat $REF$CT | tr -d '\r')
+  echo "$REFDATA" > $REF$CT
+  OUTDATA=$(cat $OUT$CT | tr -d '\r')
+  echo "$OUTDATA" > $OUT$CT
+
   echo "============================================================"
   #printf "Difference between files \n\t%s\nand \t%s\n\n" "$REF$CT" "$OUT$CT"
   eval diff -u -s -a "$REF$CT" "$OUT$CT"

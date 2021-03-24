@@ -7,7 +7,7 @@ eval mkdir -p data
 eval mkdir -p data/ref
 eval rm -rf "$GENTO"
 eval mkdir "$GENTO"
-eval rm stock-*
+eval rm -f stock-*
 eval cp stonks/* ./
 
 CT=1
